@@ -1,0 +1,120 @@
+/*
+* Icons
+* ================ */
+.icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.icon-circle{ border-radius: 50%; }
+.icon-bordered{ border: 2px solid; }
+
+// Size
+.icon-sm { font-size: 14px; }
+.icon-md{ font-size: 20px; }
+.icon-lg { font-size: 40px; }
+
+// Color
+.icon-primary {
+  color: #FFF;
+  background: $brand-primary;
+}
+
+@media (min-width: 1200px) {
+  .icon-block {
+    padding: 0 10px;
+  }
+}
+
+/*
+* Icon Block
+* ================== */
+.icon-block {
+	.icon {
+	  font-size: 30px;
+	  position: relative;
+	  width: 85px;
+	  height: 85px;
+	  display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+              align-items: center;
+	  margin: 0 auto;
+	  & + * { margin-top: 15px; @media(min-width: 992px){ margin-top: 25px; } }
+	  &:after {
+		  content: none;
+		  position: absolute;
+		  top: -15px;
+		  bottom: -15px;
+		  left: -15px;
+		  right: -15px;
+		  border: 2px solid $brand-primary;
+		  border-radius: 50%;
+		  -webkit-transition: all .3s ease-in-out;
+		  transition: all .3s ease-in-out;
+		  @media(min-width: 992px){ content: ''; }
+		  @media(min-width: 992px){
+		  	top: -40px;
+		    bottom: -40px;
+		    left: -40px;
+		    right: -40px;
+		    opacity: 0;
+		  }
+		}
+	}
+	&:hover .icon:after{
+		top: -15px;
+	  bottom: -15px;
+	  left: -15px;
+	  right: -15px;
+	  opacity: 1;
+	}
+}
+
+/*
+* Icon Line
+* ================== */  
+.icon-line {
+	width: 40px;
+  @media(min-width: 480px){ width: auto; }
+  @media(min-width: 768px){ padding-right: 10px; }
+  @media(min-width: 992px){ padding-right: 0; }
+  @media(min-width: 1200px){ padding-right: 10px; }
+	a {
+	  border-radius: 50%;
+	  &:hover {
+		  background: $brand-primary;
+		  color: #fff;
+		}
+		& + a { margin-top: 10px; }
+	  span {
+		  display: -webkit-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		  -webkit-box-pack: center;
+		  -ms-flex-pack: center;
+		          justify-content: center;
+		  -webkit-box-align: center;
+		  -ms-flex-align: center;
+		          align-items: center;
+		  width: 40px;
+		  height: 40px;
+		  font-size: 20px;
+		}
+	}
+	& + * { 
+		width: calc(100% - 45px); 
+		@media(min-width: 480px){ width: auto; } 
+		@media(min-width: 992px){ width: calc(100% - 45px); }
+		@media(min-width: 1200px){ width: auto; }
+	}
+}
+
+
+
+

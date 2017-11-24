@@ -1,0 +1,41 @@
+/*
+* Layouts
+* ================ */
+.main-wrapper {
+	position: relative;
+  overflow: hidden;
+  background: $content-bg;
+}
+body.boxed {
+	&.bg-image{
+    background: url(../img/pattern-1.jpg) top center repeat;
+    background-attachment: fixed;
+  }
+	.main-wrapper{
+	  margin: 0 auto;
+	  
+	  box-shadow: 0 0 10px 0 rgba(#000,0.2);
+	  @media(min-width: 768px){
+	  	max-width: 778px;
+	  	.k-nav{ max-width: 778px; }
+	  	.main-footer{ max-width: 778px; }
+	  }
+	  @media(min-width: 992px){
+	  	max-width: 1054px;
+	  	.k-nav{ max-width: 1054px; }
+	  	.main-footer{ max-width: 1054px; }
+	  }
+	  @media(min-width: 1200px){
+	  	max-width: 1230px;
+	  	.k-nav{ max-width: 1230px; }
+	  	.main-footer{ max-width: 1230px; }
+	  }
+	  @media(min-width: 1800px){
+	  	max-width: 1300px;
+	  	.k-nav{ max-width: 1300px; }
+	  	.main-footer{ max-width: 1300px; }
+	  }	  
+	}
+}
+
+.parallax-mirror{ z-index: 1!important; }

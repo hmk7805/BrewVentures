@@ -1,0 +1,80 @@
+/* ======= COLOR 1 ======= */
+
+
+input, select, textarea{
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+
+#page-preloader,
+.bg-primary,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default:active:focus,
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus,
+.icon-primary,
+.icon-line a:hover,
+.divider,
+.pricing-box__head,
+.pricing-box__head .curved-line:before,
+.img-container .img-panel .img-links a .icon,
+.img-container .img-panel ul li .icon:hover,
+.video-section .btn-play,
+.count-on .counter-data:hover .icon,
+.ql-nav.ql-nav-fixed .ql-nav-links li.active,
+.ql-nav-toggle,
+.toTopButton,
+.accordion-title:hover,
+.accordion-title.active,
+.iso .button:after,
+#style-switcher .toggle-switcher,
+#style-switcher .layout li.active,
+.progress-wrapper .progress .progress-bar,
+.first-section .btn-default:hover{
+	background: #fbb03b;
+}
+
+a:hover,
+a:focus,
+h1 a:focus, h1 a:hover, h2 a:focus, h2 a:hover, h3 a:focus, h3 a:hover, h4 a:focus, h4 a:hover, h5 a:focus, h5 a:hover, h6 a:focus, h6 a:hover, .h1 a:focus, .h1 a:hover, .h2 a:focus, .h2 a:hover, .h3 a:focus, .h3 a:hover, .h4 a:focus, .h4 a:hover, .h5 a:focus, .h5 a:hover, .h6 a:focus, .h6 a:hover,
+html body .text-primary,
+.btn-default,
+.btn-primary:hover,
+.subscription-form .btn-submit:hover,
+.contact-data .icon,
+.img-container .img-panel .img-links a .icon:hover,
+.blog-post .post-text .post-data > * .icon,
+.count-on .counter-data .icon,
+html body .ql-nav-links li.active a,
+html body .ql-nav-links a:hover,
+.swiper-pagination-current,
+.responsive-tabs .resp-tabs-list li:hover{
+	color: #fbb03b;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.icon-block .icon:after,
+.form-control:focus,
+.contact-form .form-control:hover,
+.video-section .btn-play,
+.responsive-tabs .resp-accordion,
+.responsive-tabs .resp-accordion + .resp-tab-content:after{
+  border-color: rgb(58, 123, 213);
+}
+
+.pricing-box .btn-primary {
+  box-shadow: -3px 3px 20px 0 rgba(58, 123, 213, 0.6);
+}
+
+.ql-nav.ql-nav-fixed .ql-nav-links li a:hover {
+  background: rgba(58, 123, 213, 0.7);
+}

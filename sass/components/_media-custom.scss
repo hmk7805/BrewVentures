@@ -1,0 +1,76 @@
+/*
+* Media
+// ====================*/
+$media-gutter: 30px;
+
+.media-right { padding-top: $media-gutter; }
+.media-left { padding-bottom: $media-gutter; }
+
+.media-ltr { direction: ltr; }
+.media-rtl { 
+  direction: rtl; 
+  > .media-left {
+    padding-right: 0;
+    padding-left: $media-gutter;
+  }
+  > .media-right {
+    padding-right: $media-gutter;
+    padding-left: 0;
+  }
+}
+
+.media {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 0 1 100%;
+  -webkit-flex: 0 1 100%;
+  flex: 0 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}  
+@include make-media("0", $media-gutter);
+@media (min-width: $screen-xs-min) {
+  @include make-media("xs", $media-gutter);
+}
+@media (min-width: $screen-sm-min) {
+  @include make-media("sm", $media-gutter);
+}
+@media (min-width: $screen-md-min) {
+  @include make-media("md", $media-gutter);
+}
+@media (min-width: $screen-lg-min) {
+  @include make-media("lg", $media-gutter);
+}
+
+
+.media{
+  > .media-left,
+  > .media-right,
+  > .media-body {
+    padding: 0;
+    direction: ltr;
+    display: block;
+  }
+  .media-left{ 
+    margin-top: 8px; 
+    padding-right: 10px;
+    @media(min-width: 768px){ padding-right: $media-gutter; }
+  }
+  .media-body{
+    text-align: left;
+    overflow: visible;
+    position: relative;
+    z-index: -1;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(-70%, -50%);
+      width: 106px;
+      height: 76px;
+      z-index: -2;
+    }
+  }
+}

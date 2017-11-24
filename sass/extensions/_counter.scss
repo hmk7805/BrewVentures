@@ -1,0 +1,46 @@
+/* Counter
+// ====================*/
+.count-on{
+	position: relative;
+	z-index: 1;
+	.counter-data{
+		& > *{
+			@media(min-width: 992px){
+				display: inline-block; 
+				vertical-align: middle;
+			}
+			& + *{ margin-top: 10px; @media(min-width: 992px){ margin-left: 10px; margin-top: 0; } }
+		} 
+		.icon{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			        align-items: center;
+			font-size: 24px;
+			color: $brand-primary;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin: 0 auto;
+			background: #fff;
+			-webkit-transition: all .4s ease;
+			transition: all .4s ease;
+			@media(min-width: 1200px){ width: 70px; height: 70px; }
+		}
+		&:hover .icon{ color: #fff; background: $brand-primary; box-shadow: 0 10px 15px 0 rgba(#000,0.2); }
+	}
+	.counter{
+		font-family: $secondary-font-family;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 1.2;
+		@media(min-width: 768px){ font-size: 48px; }
+	}
+}

@@ -1,0 +1,32 @@
+/*
+* Lists
+* ================ */
+.list-inline li {
+  letter-spacing: 0.05em;
+  & + li { margin-left: 10px; @media(min-width: 768px){ margin-left: 20px; } }
+}
+
+.list li {
+  letter-spacing: 0.05em;
+  & + li { margin-top: 20px; }
+}
+
+.marked-list {
+	li {
+	  padding-left: 40px;
+	  font-size: 14px;
+	  & + li { margin-top: 15px; }
+	  span {
+		  position: relative;
+		  &:before {
+			  content: '\f00c';
+			  font-family: $fa;
+			  font-size: 15px;
+			  position: absolute;
+			  top: 50%;
+			  transform: translateY(-50%);
+			  left: -40px;
+			}
+		}
+	}
+}

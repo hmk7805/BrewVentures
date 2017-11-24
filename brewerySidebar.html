@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="wow-animation">
+<head>
+    <!-- Site Title -->
+    <title>BrewVentures</title>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-color.css">
+    <link rel="stylesheet" href="css/styleBV.css">  
+
+    <!-- jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+  
+</head>
+<body>
+<!-- Accordian Side Bar mock up with classes and IDs there is css (styleBV.css) and js (line 34) that are necessary for this -->
+<div id='accordion brewSidebar'>    
+    <img src='img/hop2.png' alt='hop' class='faviconHop'>
+    <h6 class='accordion-title brewName' style='display:inline;'> Brewery Name</h6>
+    <div class="accordion-inner brewInfoDiv">
+        <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
+        <p class="brewAddress">401 North Tryon Street</p>
+        <p class="brewHours">Sun: 11:00 AM - 11:00 PM Mon-Sat: 11:00 AM - 2:00  AM</p>
+        <a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a>
+    </div>
+</div>
+    <button class='accordionBtn brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h6 class='brewName'>Brewery Name</6>
+    </button>
+    <div class="panel brewInfoDiv">
+        <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
+        <p class="brewAddress">401 North Tryon Street</p>
+        <p class="brewHours">Sun: 11:00 AM - 11:00 PM Mon-Sat: 11:00 AM - 2:00  AM</p>
+        <a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a>
+    </div>    <button class='accordionBtn brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h6 class='brewName'>Brewery Name</6>
+    </button>
+    <div class="panel brewInfoDiv">
+        <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
+        <p class="brewAddress">401 North Tryon Street</p>
+        <p class="brewHours">Sun: 11:00 AM - 11:00 PM Mon-Sat: 11:00 AM - 2:00  AM</p>
+        <a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a>
+    </div>
+    <button class='accordionBtn brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h6 class='brewName'>Brewery Name</h6>
+    </button>
+    <div class="panel brewInfoDiv">
+        <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
+        <p class="brewAddress">401 North Tryon Street</p>
+        <p class="brewHours">Sun: 11:00 AM - 11:00 PM Mon-Sat: 11:00 AM - 2:00  AM</p>
+        <a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a>
+    </div>
+</div>
+
+<!-- accordions for saved tours -->
+<div class = 'accordion tourSidebar'>
+    <img src='img/hop2.png' alt='hop' class='faviconHop click'><p class="tourBtn accordion-title" style = 'display:inline;''>Tour Name</p>
+    <div class="accordion-inner tourExpand">
+        <p class='tourName'>Tour Name</p>
+        <p class='tourCity'>Tour City</p>
+        <a href='trip.html' target='_blank'><p class = 'tourLink'>URL to Share</p></a>
+    </div>
+    <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
+    <div class="accordion-inner tourExpand">
+        <p class='tourName'>Tour Name</p>
+        <p class='tourCity'>Tour City</p>
+        <a href='trip.html' target='_blank'><span class = 'tourLink'>URL to Share</span></a>
+    </div>
+    <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
+    <div class="accordion-inner tourExpand">
+        <p class='tourName'>Tour Name</p>
+        <p class='tourCity'>Tour City</p>
+        <a href='trip.html' target='_blank'><p class = 'tourLink'>URL to Share</p></a>
+    </div>
+</div> 
+
+<script>
+// accordian
+var acc = document.getElementsByClassName("accordionBtn");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+} 
+//accordian end
+//tourSide bar
+    //on click of tourBtn we need to have the map view for that tour show in the left panel.
+</script>
+
+<!-- Core Scripts -->
+<script src="js/minified.js"></script>
+
+<!-- Additional Functionality Scripts -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
